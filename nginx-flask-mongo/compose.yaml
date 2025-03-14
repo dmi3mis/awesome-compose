@@ -1,6 +1,6 @@
 services:
   web:
-    image: nginx
+    image: registry.k8s.flane.ru:5001/library/nginx
     volumes:
       - ./nginx/nginx.conf:/tmp/nginx.conf
     environment: 
@@ -26,4 +26,4 @@ services:
       -  mongo  
 
   mongo:
-    image: mongo
+    image: registry.k8s.flane.ru:5001/library/mongo
